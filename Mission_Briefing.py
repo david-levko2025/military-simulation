@@ -45,14 +45,16 @@ class RecoMission(Mission):
     def execute(self):
         for i in self.unit.strike_option:
             i.strike()
+            self.unit.attack()
 
 class StrikeMission(Mission):
     def execute(self):
         for i in self.unit.strike_option:
             i.strike()
+            self.unit.attack()
 
 class RescueMission(Mission):
     def execute(self):
         for i in self.unit.strike_option:
             i.strike()
-
+            self.unit.attack()
