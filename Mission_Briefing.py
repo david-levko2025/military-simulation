@@ -24,13 +24,17 @@ class Mission(ABC):
 class MissionManager:
     def __init__(self):
         self.missions = []
+        for i in self.missions:
+            print(self.missions)
 
     def add_missions(self,mission):
         self.missions.append(mission)
+        print("mission added sucssefuly")
         return self.missions
 
     def remove_missions(self,mission):
         self.missions.remove(mission)
+        print("mission remove sucssefuly")
         return self.missions
 
 agent1 = Agent("007",1)
