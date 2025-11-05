@@ -3,10 +3,21 @@ from  abc import ABC,abstractmethod
 
 class Weapon:
     total_weapon = 0
+    serial = 0
     def __init__(self, name:str,ammo:int):
         self.name = name
         self.ammo = ammo
         self.total_weapon += 1
+        self.serial_number = Weapon.serial
+
+    def __str__(self):
+        return f'the weapon: {self.name} and is serial number {self.serial_number}'
+
+    def reload(self,amount):
+        amount = 15
+        if self.ammo in Weapon == 15:
+            amount += self.ammo
+
 
 class Solider:
     def __init__(self,name:str,rank:str,weapon:Weapon):
@@ -31,17 +42,14 @@ class Unit(ABC):
     def attack(self):
         pass
 
-
-
-
-
-
 class Infantry(Unit):
     def attack(self):
         print("infantry unit attack")
+
 class TankUnit(Unit):
     def attack(self):
         print("tank unit attack")
+
 class Sniper(Unit):
     def attack(self):
         print("sniper unit attack")

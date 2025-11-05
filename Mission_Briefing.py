@@ -24,6 +24,7 @@ class Mission(ABC):
 class MissionManager:
     def __init__(self):
         self.missions = []
+
         for i in self.missions:
             print(self.missions)
 
