@@ -14,9 +14,13 @@ class Weapon:
         return f'the weapon: {self.name} and is serial number {self.serial_number}'
 
     def reload(self,amount):
-        amount = 15
-        if self.ammo in Weapon == 15:
-            amount += self.ammo
+        amount = 30
+        max_capacity = 120
+        if self.ammo in Weapon == 30:
+            self.ammo += amount
+            max_capacity -= amount
+
+
 
 
 class Solider:
