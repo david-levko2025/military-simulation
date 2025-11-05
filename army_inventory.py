@@ -38,12 +38,12 @@ class Unit(ABC):
 
 class Infantry(Unit):
     def attack(self):
-        print("infantry unit strike")
+        print("infantry unit attack")
 class TankUnit(Unit):
     def attack(self):
-        print("tank unit strike")
+        print("tank unit attack")
 class Sniper(Unit):
     def attack(self):
-        print("sniper unit strike")
+        print("sniper unit attack")
 
 

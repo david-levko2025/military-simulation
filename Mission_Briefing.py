@@ -1,11 +1,14 @@
 from army_inventory import Unit
-from main import i1
+from lessens_exersice_in_the_army.week3.day4.military_simulation.army_inventory import Infantry, TankUnit, Sniper
+from lessens_exersice_in_the_army.week3.day4.military_simulation.strike_options import Drone,Tank
+from main import i1,b1,t1,b2,s1,a1
+from abc import ABC
 class Agent:
     def __init__(self,codename:str,clearance_level:int):
         self.codename = codename
         self.clearance_level = clearance_level
 
-class Mission:
+class Mission(ABC):
     def __init__(self,mission_name:str, target:str, assigned_agent:Agent,assigned_unit:Unit):
         self.mission_name = mission_name
         self.target = target
@@ -32,12 +35,15 @@ class MissionManager:
 
 agent1 = Agent("007",1)
 mission_to_unit = Mission("mivcha antebe","Uganda",agent1,i1)
-class RecoMission:
+
+class RecoMission(Mission):
     def execute(self):
-        pass
-class StrikeMission:
+        Drone.strike(b1),Sniper.attack(s1)
+
+class StrikeMission(Mission):
     def execute(self):
-        pass
-class RescueMission:
+        TankUnit.attack(t1),Drone.strike(b2)
+
+class RescueMission(Mission):
     def execute(self):
-        pass
+        Infantry.attack(i1),Tank.strike(a1)

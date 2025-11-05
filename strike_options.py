@@ -5,12 +5,12 @@ class StrikeOption:
         self.name = name
         self.ammo = ammo
     def strike(self):
-        print("we have a heat")
+        print("we have a strike")
 
 class Tank(StrikeOption):
     def strike(self):
-        print("the shoot from the tank pass good")
+        print("the strike from the tank pass good")
 
 class Drone(StrikeOption):
     def strike(self):
-        print("the shoot from the drone pass good")
+        print("the strike from the drone pass good")
