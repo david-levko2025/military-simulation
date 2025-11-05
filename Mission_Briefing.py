@@ -43,12 +43,16 @@ mission_to_unit = Mission("mivcha antebe","Uganda",agent1,i1)
 
 class RecoMission(Mission):
     def execute(self):
-        Drone.strike(b1),Sniper.attack(s1)
+        for i in self.unit.strike_option:
+            i.strike()
 
 class StrikeMission(Mission):
     def execute(self):
-        TankUnit.attack(t1),Drone.strike(b2)
+        for i in self.unit.strike_option:
+            i.strike()
 
 class RescueMission(Mission):
     def execute(self):
-        Infantry.attack(i1),Tank.strike(a1)
+        for i in self.unit.strike_option:
+            i.strike()
+
